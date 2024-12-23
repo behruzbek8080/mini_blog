@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <!-- Blog Section -->
+    <div class="card mb-4 shadow-sm">
+        {% if blog.image %}
+            <img src="{{ blog.image.url }}" class="card-img-top" alt="{{ blog.title }}">
+        {% else %}
+            <img src="https://via.placeholder.com/800x400" class="card-img-top" alt="Placeholder">
+        {% endif %}
+        <div class="card-body">
+            <h1 class="card-title">{{ blog.title }}</h1>
+            <p class="card-text text-muted">{{ blog.description }}</p>
+            <hr>
+            <p class="card-text">{{ blog.content }}</p>
+        </div>
+    </div>
+    <div class="col-md-10">
+        <form method="post" >
+            <label for="inputPassword5" class="form-label">Comment</label>
+        <div class="d-flex">
+        <input type="TEXT" name="comment" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+        <button  class="btn btn-success ms-2" type="submit">add comment</button>
+        </div>
+        </form>
+    </div>
+{% endblock %}
+

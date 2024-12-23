@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h1>hello world</h1>
+<div class="container">
+    <div class="row d-flex justify-content-center"    >
+        <div class="col-md-8">
+            <ul class="list-group">
+                {% for blog in blogs %}
+                <li class="list-group-item fs-5"><a href="{% url 'blog_detail' blog.pk %}">{{ blog.title }}</a> </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
