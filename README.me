@@ -1,0 +1,84 @@
+# Django Mini Blog
+
+Bu Django asosida yaratilgan oddiy blog loyihasi. Loyihada foydalanuvchilar blog postlarini yaratishi, tahrirlashi, o’chirish va ko‘rishi mumkin. Shuningdek, postlarga izoh (comment) qoldirish imkoniyati ham mavjud.
+
+## Xususiyatlar
+- Foydalanuvchi autentifikatsiyasi (ro‘yxatdan o‘tish, kirish, chiqish).
+- Blog postlarni yaratish, o‘chirish, tahrirlash.
+- Postlarga izohlar qoldirish.
+- Postlarning ro‘yxatini ko‘rish.
+- Postlarni alohida ko‘rish uchun sahifa.
+
+## Texnologiyalar
+Loyiha quyidagi texnologiyalar yordamida ishlab chiqilgan:
+
+- Python 3.9+
+- Django 4.0+
+- SQLite (standart ma’lumotlar bazasi)
+- HTML, CSS (Bootstrap)
+
+## O‘rnatish
+Loyihani lokal muhitga o‘rnatish uchun quyidagi bosqichlarni bajaring:
+
+1. **Kodlarni klonlash:**
+   ```bash
+   git clone https://github.com/username/mini_blog.git
+   cd mini_blog
+   ```
+
+2. **Virtual muhitni yaratish:**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # Windows uchun: venv\Scripts\activate
+   ```
+
+3. **Kerakli kutubxonalarni o‘rnatish:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Ma’lumotlar bazasini yaratish:**
+   ```bash
+   python manage.py migrate
+   ```
+
+5. **Admin foydalanuvchini yaratish:**
+   ```bash
+   python manage.py createsuperuser
+   ```
+
+6. **Loyihani ishga tushirish:**
+   ```bash
+   python manage.py runserver
+   ```
+   Brauzeringizda [http://127.0.0.1:8000/](http://127.0.0.1:8000/) manzilini oching.
+
+## Foydalanish
+1. Loyihani ishga tushirgandan so‘ng, asosiy sahifada blog postlarini ko‘rishingiz mumkin.
+2. Admin panelga kirib, yangi postlarni qo‘shishingiz yoki mavjudlarini tahrirlashingiz mumkin.
+3. Har bir post uchun izoh qoldirish funksiyasi mavjud.
+
+## Papka tuzilishi
+- **blog/**: Asosiy ilova (app) fayllari.
+  - `models.py`: Ma’lumotlar bazasi modullari.
+  - `views.py`: Sahifalar uchun ko‘rish funksiyalari.
+  - `urls.py`: URL yo‘nalishlari.
+  - `templates/`: HTML shablonlari.
+
+- **static/**: CSS, JS va rasmlar uchun statik fayllar.
+- **db.sqlite3**: Standart SQLite ma’lumotlar bazasi.
+- **manage.py**: Django boshqaruv fayli.
+
+## Hissa qo‘shish
+Agar loyiha sizga yoqsa yoki yaxshilashni istasangiz, quyidagilarni qilishingiz mumkin:
+- Yangi xususiyatlar qo‘shish.
+- Kodeyni optimallashtirish.
+- Pull request yuborish.
+
+## Litsenziya
+Ushbu loyiha [MIT Litsenziyasi](LICENSE) ostida tarqatilgan.
+
+---
+**Muallif:** Behruz Muzaffarov
+**Aloqa:** behruzabdurasulov567@gmail.com  
+
